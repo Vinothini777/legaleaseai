@@ -275,7 +275,9 @@ if generate_button:
 
                 generator = GeminiDocumentGenerator(
     api_key=st.secrets.get("GEMINI_API_KEY", "")
-)
+        )
+                st.write("Gemini key loaded:", bool(generator.api_key))
+                st.write("Gemini model:", generator.model)
                 generated_document = (
                     generator.generate_document(
                         document_type=document_type,
