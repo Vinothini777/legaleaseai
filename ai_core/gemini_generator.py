@@ -160,6 +160,8 @@ before signing or relying upon it.
         # -------------------------------------------------
         # FALLBACK TO DEMO MODE
         # -------------------------------------------------
+                print(f"GEMINI ERROR: {last_error}")
+                
         self.mode = "demo"
 
         return self._demo_document(
