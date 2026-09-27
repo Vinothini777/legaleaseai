@@ -161,10 +161,7 @@ before signing or relying upon it.
         # FALLBACK TO DEMO MODE
         # -------------------------------------------------
                 print(f"GEMINI ERROR: {last_error}")
-                
-        self.mode = "demo"
-
-        return self._demo_document(
+raise RuntimeError(f"Gemini API error: {last_error}") from last_error
             document_type=document_type,
             parties=parties,
             terms=terms,
