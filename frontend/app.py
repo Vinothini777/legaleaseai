@@ -1,3 +1,4 @@
+import os
 import sys
 from pathlib import Path
 
@@ -15,7 +16,8 @@ if str(PROJECT_ROOT) not in sys.path:
 
 load_dotenv(PROJECT_ROOT / ".env")
 
-
+if "GEMINI_API_KEY" in st.secrets:
+    os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
 # ---------------------------------------------------------
 # LEGAL EASE IMPORTS
 # ---------------------------------------------------------
