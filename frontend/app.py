@@ -349,7 +349,7 @@ if st.session_state.generated:
     if mode == "demo":
 
         st.warning(
-            "Demo mode is active. Gemini AI was not used."
+            "Demo mode is active. Gemini AI  used."
         )
 
     elif mode == "gemini":
